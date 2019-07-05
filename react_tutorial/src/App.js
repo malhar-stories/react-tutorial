@@ -72,18 +72,19 @@ class App extends Component {
     });
   }
 
-  style = {
-    backgroundColor: 'white',
-    font: 'comic sans ms',
-    border: '1px solid blue',
-    padding: '8px',
-    cursor: 'pointer'
-  };
 
 
     render(){
 
       let persons = null;
+      const style = {
+        backgroundColor: 'green',
+        color: 'white',
+        font: 'comic sans ms',
+        border: '1px solid blue',
+        padding: '8px',
+        cursor: 'pointer'
+      };
 
       if (this.state.showPersons){
         persons = (
@@ -99,6 +100,7 @@ class App extends Component {
             })}
           </div>
         );
+        style.backgroundColor = 'red';
       }
 
       return ( 
@@ -110,7 +112,7 @@ class App extends Component {
           <p className="App-intro">
             To get started, edit <code>src/App.js</code> and save to reload.
           </p>
-          <button style={this.style} onClick={this.togglePersonView}>Switch Name</button>
+          <button style={style} onClick={this.togglePersonView}>Switch Name</button>
           {persons}
         </div>
       );
