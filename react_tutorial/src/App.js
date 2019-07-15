@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// import Radium, { StyleRoot } from 'radium';
 import logo from './logo.svg';
 import './App.css';
 import Person from './Person/Person';
@@ -83,7 +84,7 @@ class App extends Component {
         font: 'comic sans ms',
         border: '1px solid blue',
         padding: '8px',
-        cursor: 'pointer'
+        cursor: 'pointer',
       };
 
       if (this.state.showPersons){
